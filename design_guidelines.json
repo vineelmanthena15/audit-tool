@@ -1,0 +1,157 @@
+{
+  "design_system": {
+    "identity": {
+      "name": "PharmaAudit Pro",
+      "persona": "Clinical Precision",
+      "principles": [
+        "Sterile but Human: Clean white surfaces with tactile, high-contrast controls.",
+        "Data is King: Numbers (stock counts) are the heroes. Use Monospace fonts for all data.",
+        "Thumb-First: All primary actions (Save, Next, Upload) must be in the bottom 30% of the screen.",
+        "Error-Proof: Deviations are loud (Red/Orange). Matches are quiet (Green)."
+      ]
+    },
+    "typography": {
+      "font_family": {
+        "headings": "Manrope, sans-serif",
+        "body": "Inter, sans-serif",
+        "data": "JetBrains Mono, monospace"
+      },
+      "scale": {
+        "h1": "text-3xl font-bold tracking-tight text-slate-900",
+        "h2": "text-2xl font-semibold tracking-tight text-slate-800",
+        "h3": "text-xl font-medium text-slate-800",
+        "body": "text-base text-slate-600 leading-relaxed",
+        "caption": "text-sm text-slate-500",
+        "data_large": "text-4xl font-mono font-bold tracking-tighter text-slate-900",
+        "data_medium": "text-xl font-mono font-semibold text-slate-700"
+      }
+    },
+    "colors": {
+      "palette": {
+        "background": "#F8FAFC",
+        "surface": "#FFFFFF",
+        "primary": "#0F766E",
+        "primary_foreground": "#FFFFFF",
+        "secondary": "#E2E8F0",
+        "secondary_foreground": "#0F172A",
+        "accent": "#F59E0B",
+        "destructive": "#BE123C",
+        "success": "#15803D",
+        "border": "#CBD5E1",
+        "input": "#E2E8F0",
+        "ring": "#0F766E"
+      },
+      "usage": {
+        "primary_action": "bg-teal-700 hover:bg-teal-800 text-white shadow-lg shadow-teal-900/20",
+        "secondary_action": "bg-slate-100 hover:bg-slate-200 text-slate-900 border border-slate-200",
+        "deviation_alert": "bg-rose-50 border-l-4 border-rose-600 text-rose-900",
+        "success_badge": "bg-green-100 text-green-800 border border-green-200",
+        "warning_badge": "bg-amber-100 text-amber-800 border border-amber-200"
+      }
+    },
+    "layout": {
+      "spacing": {
+        "container_padding": "p-4 md:p-8",
+        "section_gap": "gap-6",
+        "item_gap": "gap-4"
+      },
+      "grids": {
+        "mobile_form": "flex flex-col gap-6",
+        "desktop_dashboard": "grid grid-cols-1 md:grid-cols-4 gap-6",
+        "audit_list": "flex flex-col gap-3"
+      },
+      "containers": {
+        "card": "bg-white rounded-xl border border-slate-200 shadow-sm p-6",
+        "mobile_bottom_sheet": "fixed bottom-0 left-0 right-0 bg-white rounded-t-2xl shadow-[0_-4px_24px_rgba(0,0,0,0.1)] p-6 z-50"
+      }
+    },
+    "components": {
+      "buttons": {
+        "primary": "h-12 px-6 rounded-lg bg-teal-700 text-white font-medium hover:bg-teal-800 active:scale-95 transition-all shadow-md",
+        "secondary": "h-12 px-6 rounded-lg bg-white border border-slate-300 text-slate-700 font-medium hover:bg-slate-50 active:scale-95 transition-all",
+        "icon": "h-10 w-10 rounded-full flex items-center justify-center hover:bg-slate-100 transition-colors"
+      },
+      "inputs": {
+        "default": "h-12 px-4 rounded-lg border border-slate-300 bg-white focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all",
+        "large_number": "h-16 text-3xl text-center font-mono tracking-widest border-2 border-slate-200 rounded-xl focus:border-teal-600 focus:ring-0 bg-slate-50"
+      },
+      "cards": {
+        "audit_item": "group relative overflow-hidden bg-white rounded-xl border border-slate-200 hover:border-teal-500 transition-colors p-5"
+      }
+    },
+    "visual_enhancers": {
+      "shadows": {
+        "soft": "shadow-[0_2px_8px_rgba(0,0,0,0.04)]",
+        "floating": "shadow-[0_8px_24px_rgba(15,118,110,0.15)]"
+      },
+      "borders": {
+        "subtle": "border border-slate-100",
+        "crisp": "border border-slate-200"
+      },
+      "textures": {
+        "noise": "bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"
+      }
+    },
+    "motion": {
+      "transitions": "transition-all duration-200 ease-out",
+      "hover_lift": "hover:-translate-y-1 hover:shadow-md",
+      "active_press": "active:scale-[0.98]"
+    },
+    "accessibility": {
+      "contrast": "Ensure text is Slate-600 or darker on white backgrounds.",
+      "touch_targets": "Minimum 44px height for all interactive elements.",
+      "focus_states": "Visible ring-2 ring-teal-500 ring-offset-2"
+    }
+  },
+  "assets": {
+    "images": [
+      {
+        "category": "Login/Hero",
+        "url": "https://images.pexels.com/photos/4740585/pexels-photo-4740585.jpeg",
+        "description": "Clean, bright pharmacy warehouse shelves. Use as a subtle background with overlay for the Role Selection screen."
+      },
+      {
+        "category": "Empty State",
+        "url": "https://images.pexels.com/photos/35280876/pexels-photo-35280876.png",
+        "description": "Abstract medical/clean composition. Use for 'No Audits Found' or 'All Caught Up' states."
+      }
+    ],
+    "icons": {
+      "library": "lucide-react",
+      "preferred_set": ["ClipboardCheck", "Box", "AlertTriangle", "CheckCircle2", "User", "Store", "UploadCloud", "FileSpreadsheet"]
+    }
+  },
+  "instructions_to_main_agent": {
+    "general": [
+      "Implement the 'Clinical Precision' theme strictly.",
+      "Use 'Manrope' for all headings and 'JetBrains Mono' for all stock numbers.",
+      "Ensure the layout is mobile-first. On desktop, use the 'Control Room' grid for the Admin Dashboard.",
+      "Do NOT use generic gradients. Use solid colors and high-contrast borders.",
+      "All inputs must have `data-testid` attributes."
+    ],
+    "specific_pages": {
+      "role_selection": "Use the warehouse image as a background with a heavy white/glass overlay. Center the two role cards.",
+      "auditor_dashboard": "List view. High contrast status badges. Large 'Start Audit' FAB (Floating Action Button).",
+      "audit_screen": "Focus on the input field. The 'Counted Qty' input should be massive (text-4xl).",
+      "admin_dashboard": "Bento grid layout. Key metrics at top. Recent uploads list below."
+    }
+  },
+  "universal_guidelines": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Eg: `transition: all`. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms.",
+    "You MUST NOT center align the app container, ie do not add `.App { text-align: center; }` in the css file. This disrupts the human natural reading flow of text.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style.",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories = main agent will use placeholder text which is FORBIDDEN.",
+    "Prioritize using pre-existing components from src/components/ui when applicable.",
+    "Components MUST use named exports (export const ComponentName = ...).",
+    "Pages MUST use default exports (export default function PageName() {...}).",
+    "Use `sonner` for toasts."
+  ]
+}
